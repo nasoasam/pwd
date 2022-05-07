@@ -7,7 +7,7 @@ services:
         - '8080:8080'
         - '3000:3000'
       user:
-        - "${UID}:${GID}"
+        - "0:0"
       volumes: 
         - $HOME:/home/coder/project
       command:
