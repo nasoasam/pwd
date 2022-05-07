@@ -4,6 +4,7 @@ services:
       image: codercom/code-server
       ports:
         - '80:80'
+        - '8080:8080'
         - '3000:3000'
       volumes: 
         - $HOME:/home/coder/project
