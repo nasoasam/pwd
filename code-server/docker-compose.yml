@@ -1,11 +1,11 @@
 version: '2'
-  services:
-    coder:
-        image: codercom/code-server
-        ports:
-          - '80:80'
-          - '3000:3000'
-        volumes: 
-          - $HOME:/home/coder/project
-        command:
-          - "--auth=none"
+services:
+  coder:
+      image: codercom/code-server
+      ports:
+        - '80:80'
+        - '3000:3000'
+      volumes: 
+        - $HOME:/home/coder/project
+      command:
+        - "--auth=none"
