@@ -6,6 +6,8 @@ services:
         - '80:80'
         - '8080:8080'
         - '3000:3000'
+      user:
+        - "${UID}:${GID}"
       volumes: 
         - $HOME:/home/coder/project
       command:
