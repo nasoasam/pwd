@@ -1,10 +1,11 @@
 version: '2'
-coder:
-    image: codercom/code-server
-    ports:
-      - '80:80'
-      - '3000:3000'
-    volumes: 
-      - $HOME:/home/coder/project  # 作業ディレクトリの永続化 事前にディレクトリは作っておく
-    command:
-      - "--auth=none"
+  services:
+  coder:
+      image: codercom/code-server
+      ports:
+        - '80:80'
+        - '3000:3000'
+      volumes: 
+        - $HOME:/home/coder/project  # 作業ディレクトリの永続化 事前にディレクトリは作っておく
+      command:
+        - "--auth=none"
