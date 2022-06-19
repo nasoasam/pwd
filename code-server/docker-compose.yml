@@ -1,7 +1,8 @@
 version: '3'
 services:
   coder:
-      image: codercom/code-server
+      image: (
+      
       ports:
         - '80:80'
         - '8080:8080'
@@ -11,3 +12,4 @@ services:
         - $HOME:/home/coder/project
       command:
         - "--auth=none"
+        - "--install-extension ms-ceintl.vscode-language-pack-ja"
