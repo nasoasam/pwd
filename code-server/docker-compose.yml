@@ -1,8 +1,7 @@
-version: '3'
+version: '3.2'
 services:
   coder:
-      image: (
-      
+      image: nasoasam/cs
       ports:
         - '80:80'
         - '8080:8080'
@@ -10,6 +9,10 @@ services:
       user: root
       volumes: 
         - $HOME:/home/coder/project
+        - type: bind
+          source: $HOME/certs
+          target: /certs
       command:
         - "--auth=none"
-        - "--install-extension ms-ceintl.vscode-language-pack-ja"
+        - "--cert=/certs/my-cert.crt"
+        - "--cert-key=/certs/my-cert.key"
