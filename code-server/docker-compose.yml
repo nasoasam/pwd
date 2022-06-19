@@ -8,10 +8,7 @@ services:
         - '3000:3000'
       user: root
       volumes: 
-        - $HOME:/home/coder/project
-        - type: bind
-          source: $HOME/certs
-          target: /certs
+        $HOME:/home/coder/project
       command:
         - "--auth=none"
         - "--cert=/certs/my-cert.crt"
